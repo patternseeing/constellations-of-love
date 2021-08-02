@@ -428,14 +428,9 @@ fill(color3);
   text(' C o n s t e l l a t i o n s   o f   l o v e',  width/2, 60);
 
   ////////////////////////////////////////////////////// TITLE
-if(snd){
-  muteButton.html('Mute') ;
 
-}else{
-  muteButton.html('Unmute') ;
+	
 
-}
-console.log(snd);
 }
 
 
@@ -543,11 +538,13 @@ function soundControl(){
       heartBeat.loop();
      ambient.loop();
 
+  muteButton.html('Mute') ;
 
 
   }else if(snd ==false) {
        heartBeat.pause();
     ambient.pause();
+  muteButton.html('Unmute') ;
 
 
   }
