@@ -75,7 +75,7 @@ menuButton.position(50, height-90);
 menuButton.class('button');
 menuButton.mousePressed(gotoweb);
 
-startButton = createButton('Explore');
+startButton = createButton('Explore Constellations');
 startButton.position(width/2,height/2+30);
 startButton.class('button');
 startButton.mousePressed(function(){introBool = false;soundControl()});
@@ -147,7 +147,7 @@ function draw() {
 if(introBool){
   textSize(25);
   fill(255);
-    text('Generative art rendering unique constellations using the letters of the word Love over 100 different languages.',width/2,height/2,300,300);
+    //text('',width/2,height/2,300,300);
 
     menuButton.style('display','none');
     saveButton.style('display','none');
