@@ -59,7 +59,8 @@ function preload() {
 function setup() {
   createCanvas(windowWidth,windowHeight);
 
-
+getAudioContext().resume();
+	
   saveButton = createButton('Capture');
   saveButton.position( width-180, height-90);
 saveButton.class('button');
@@ -78,9 +79,8 @@ menuButton.mousePressed(gotoweb);
 startButton = createButton('Explore Constellations');
 startButton.position(width/2-100,height/2);
 startButton.class('button');
-startButton.mousePressed(function(){introBool = false;soundControl()});
+startButton.mousePressed(function(){getAudioContext().resume();introBool = false;soundControl()});
 
-  getAudioContext().resume();
   heartBeat.loop();
  ambient.loop();
 
