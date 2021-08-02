@@ -1,0 +1,74 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+}
+canvas {
+  display: block;
+}
+
+.experience{
+
+ bottom:0;
+ padding:1%;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color:rgba(25,25,255,1);
+  position:absolute;
+  text-align: center;
+  font-family: Times;
+  font-size: 20px;
+}
+
+.dropsel {
+   font-size: 14px;
+  font-family: monospace;
+  align-content: right;
+text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+ padding: 5px;
+    color: white;
+   margin-top:.5%;
+  cursor: pointer;
+position:relative;
+border : solid 0px white;
+width:120px;
+ }
+
+.dropsel:hover {
+  font-size: 14px;
+  color: white;
+  -webkit-transition-duration: .6s;
+  background-color: red;
+
+  /* Safari */
+}
+.dropsel:focus {
+    background-color:red;
+}
+
+.button {
+   font-size: 14px;
+  font-family: monospace;
+  align-content: center;
+text-align: center;
+  background-color: rgba(0, 0, 0, .1);
+ padding: 5px;
+    color: white;
+   margin-top:.5%;
+  cursor: pointer;
+position:relative;
+border : solid 0px white;
+ }
+
+.button:hover {
+  font-size: 14px;
+  color: white;
+  -webkit-transition-duration: .6s;
+  background-color: red;
+
+  /* Safari */
+}
+.button:focus {
+    background-color:red;
+}
