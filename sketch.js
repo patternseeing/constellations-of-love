@@ -60,7 +60,7 @@ function setup() {
   createCanvas(windowWidth,windowHeight);
 
 
-	
+
   saveButton = createButton('Capture');
   saveButton.position( width-180, height-90);
 saveButton.class('button');
@@ -84,11 +84,11 @@ startButton.mousePressed(function(){introBool = false;soundControl()});
 	if (getAudioContext().state !== 'running') {
     getAudioContext().resume();
   }
-  heartBeat.loop();
- ambient.loop();
-
- heartBeat.stop();
-ambient.stop();
+//   heartBeat.loop();
+//  ambient.loop();
+//
+//  heartBeat.stop();
+// ambient.stop();
 
    editorDiv = createElement('div', '');
    editorDiv.class('experience');
@@ -397,7 +397,6 @@ if(snd){
   muteButton.html('Unmute') ;
 
 }
-getAudioContext().resume();
 console.log(snd);
 }
 
@@ -490,17 +489,22 @@ function mousePressed() {
 }
 
 function touchStarted() {
-if (getAudioContext().state !== 'running') {
+
     getAudioContext().resume();
-  }}
+
+
+}
 
 function soundControl(){
-if (getAudioContext().state !== 'running') {
-    getAudioContext().resume();
-  }  snd =! snd;
+
+  snd =! snd;
   if(snd){
-    heartBeat.play();
-      ambient.play();
+//    heartBeat.play();
+//      ambient.play();
+
+      heartBeat.loop();
+     ambient.loop();
+
 
 
   }else if(snd ==false) {
