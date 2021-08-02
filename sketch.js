@@ -80,7 +80,7 @@ startButton.position(width/2-100,height/2);
 startButton.class('button');
 startButton.mousePressed(function(){introBool = false;soundControl()});
 
-
+  getAudioContext().resume();
   heartBeat.loop();
  ambient.loop();
 
@@ -394,7 +394,7 @@ if(snd){
   muteButton.html('Unmute') ;
 
 }
-
+getAudioContext().resume();
 console.log(snd);
 }
 
@@ -482,16 +482,19 @@ function Star (speedx )
  //	line (px, py, sx, sy);
 		}
 }
+function touchStarted() {
+  getAudioContext().resume();
+}
+
 function soundControl(){
+  getAudioContext().resume();
   snd =! snd;
-	  getAudioContext().resume();	
-	
   if(snd){
     heartBeat.play();
       ambient.play();
 
 
-  }else if(snd == false) {
+  }else if(snd ==false) {
        heartBeat.pause();
     ambient.pause();
 
