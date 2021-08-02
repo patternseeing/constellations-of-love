@@ -1,4 +1,4 @@
-///////////CONSTALLATIONS OF LOVE ////////////
+///////////CONSTELLATIONS OF LOVE ////////////
 ////////// patternseeing | 2021  /////////////
 
 
@@ -484,6 +484,8 @@ function Star (speedx )
 }
 function soundControl(){
   snd =! snd;
+	  getAudioContext().resume();	
+	
   if(snd){
     heartBeat.play();
       ambient.play();
