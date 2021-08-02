@@ -1,5 +1,5 @@
 ///////////CONSTELLATIONS OF LOVE ////////////
-////////// patternseeing | 2021  /////////////
+////////// @patternseeing | 2021  /////////////
 
 
 var filePath =
@@ -62,24 +62,38 @@ function setup() {
 
 
   saveButton = createButton('Capture');
-  saveButton.position( width-180, height-90);
+  saveButton.position( width-180, height-60);
 saveButton.class('button');
   saveButton.mousePressed(saveImage);
 
 muteButton = createButton('Unmute');
-muteButton.position( width-100, height-90);
+muteButton.position( width-100, height-60);
 muteButton.mousePressed(soundControl);
 muteButton.class('button');
 
-menuButton = createButton('@ patternseeing | 2021');
-menuButton.position(50, height-90);
+menuButton = createButton('patternseeing ');
+menuButton.position(width/2-60, 70);
 menuButton.class('button');
 menuButton.mousePressed(gotoweb);
+
+tweetButton = createButton('Tweet');
+  tweetButton.position( 50, height-60);
+tweetButton.class('button');
+  tweetButton.mousePressed(tweetThis);
+
+  fbButton = createButton('Facebook');
+    fbButton.position(20+ tweetButton.x+tweetButton.width, height-60);
+  fbButton.class('button');
+    fbButton.mousePressed(fbThis);
+
+
 
 startButton = createButton('Explore Constellations');
 startButton.position(width/2-100,height/2);
 startButton.class('button');
 startButton.mousePressed(function(){introBool = false;soundControl()});
+
+
 
 	if (getAudioContext().state !== 'running') {
     getAudioContext().resume();
@@ -147,25 +161,7 @@ function draw() {
   background(0,200);
 
 
-if(introBool){
-  textSize(25);
-  fill(255);
-    //text('',width/2,height/2,300,300);
 
-    menuButton.style('display','none');
-    saveButton.style('display','none');
-    muteButton.style('display','none');
-
-
-}
-else{
-
-  counter = counter + 1;
-startButton.style('display','none');
-menuButton.style('display','block');
-saveButton.style('display','block');
-muteButton.style('display','block');
-}
 
   if (counter >= 100) {
     counter = 0;
@@ -185,6 +181,44 @@ if(counter==0){
 
 tArray = [];
 }
+
+if(introBool){
+
+  r = 0;
+   g = 0;
+   b = 0;
+var co1 = color(255, 200 * sin(frameCount*.01));
+var co2 = color(255,120,0, 200 * sin(frameCount*.01));
+
+  textSize(25);
+fill(co1);
+  textFont('Times');
+   text('Immerse yourself in unique constellations composed using the letters of the word "Love " over 100 different languages.',width/2,height/2+100,450,450);
+
+    menuButton.style('display','none');
+    saveButton.style('display','none');
+    muteButton.style('display','none');
+
+        tweetButton.style('display','none');
+
+        fbButton.style('display','none');
+
+
+        startButton.style('background-color',co2);
+
+}
+else{
+
+  counter = counter + 1;
+startButton.style('display','none');
+menuButton.style('display','block');
+saveButton.style('display','block');
+muteButton.style('display','block');
+tweetButton.style('display','block');
+fbButton.style('display','block');
+}
+
+
 
      var ang1 =  radians(counter*2)  ;
     var ang2 =  radians(counter)  ;
@@ -525,8 +559,17 @@ function mouseWheel(event) {
 counter=-1;
 }
 function saveImage(){
-  save(searchWord+".png");
+  save(searchWord+"_patternseeing.png");
 }
 function gotoweb() {
 	window.open('https://patternseeing.wordpress.com/');
+}
+
+
+function tweetThis(){
+  window.open('https://twitter.com/share?url=https://constellationsoflove.netlify.app/&text=Explore constellations of love by @patternseeing');
+}
+
+function fbThis(){
+  window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fconstellationsoflove.netlify.app%2F&amp;src=sdkpreparse');
 }
