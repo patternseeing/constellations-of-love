@@ -485,6 +485,10 @@ function Star (speedx )
  //	line (px, py, sx, sy);
 		}
 }
+function mousePressed() {
+  userStartAudio();
+}
+
 function touchStarted() {
 if (getAudioContext().state !== 'running') {
     getAudioContext().resume();
