@@ -2,8 +2,9 @@
 ////////// patternseeing | 2021  /////////////
 
 
-var filePath =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSer5QV51YWQnsSkhYfDsqB41thTaBIf9pBlqutq7pueS8acrS7dguFwsh-H0Up6P00aBj9pJ9ZamSn/pub?output=csv";
+var filePath ="assets/data.csv";
+    
+  //"https://docs.google.com/spreadsheets/d/e/2PACX-1vSer5QV51YWQnsSkhYfDsqB41thTaBIf9pBlqutq7pueS8acrS7dguFwsh-H0Up6P00aBj9pJ9ZamSn/pub?output=csv";
 
 var word = [];
 var language = [];
