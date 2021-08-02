@@ -59,7 +59,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth,windowHeight);
 
-getAudioContext().resume();
+
 	
   saveButton = createButton('Capture');
   saveButton.position( width-180, height-90);
@@ -79,8 +79,11 @@ menuButton.mousePressed(gotoweb);
 startButton = createButton('Explore Constellations');
 startButton.position(width/2-100,height/2);
 startButton.class('button');
-startButton.mousePressed(function(){getAudioContext().resume();introBool = false;soundControl()});
+startButton.mousePressed(function(){introBool = false;soundControl()});
 
+	if (getAudioContext().state !== 'running') {
+    getAudioContext().resume();
+  }
   heartBeat.loop();
  ambient.loop();
 
@@ -483,12 +486,14 @@ function Star (speedx )
 		}
 }
 function touchStarted() {
-  getAudioContext().resume();
-}
+if (getAudioContext().state !== 'running') {
+    getAudioContext().resume();
+  }}
 
 function soundControl(){
-  getAudioContext().resume();
-  snd =! snd;
+if (getAudioContext().state !== 'running') {
+    getAudioContext().resume();
+  }  snd =! snd;
   if(snd){
     heartBeat.play();
       ambient.play();
