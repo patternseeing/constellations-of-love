@@ -144,7 +144,7 @@ startButton.mousePressed(function(){introBool = false;soundControl()});
 
 
 
-  for (var i = 0; i < 1200; i ++)
+  for (var i = 0; i < 500; i ++)
 	{
     stars [i] = new Star (8);
   }
