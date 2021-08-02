@@ -1,5 +1,5 @@
 ///////////CONSTELLATIONS OF LOVE ////////////
-////////// @patternseeing | 2021  /////////////
+////////// patternseeing | 2021  /////////////
 
 
 var filePath =
@@ -187,11 +187,15 @@ if(introBool){
   r = 0;
    g = 0;
    b = 0;
-var co1 = color(255, 200 * sin(frameCount*.01));
-var co2 = color(255,120,0, 200 * sin(frameCount*.01));
+   noStroke();
+var co1 = color(15,0,25, 155 * sin(frameCount*.01));
+var co2 = color(240,170,0, 200 * sin(frameCount*.01));
+
+fill(co1);
+rect(width/2,height/2,width,height);
 
   textSize(25);
-fill(co1);
+fill(co2);
   textFont('Times');
    text('Immerse yourself in unique constellations composed using the letters of the word "Love " over 100 different languages.',width/2,height/2+100,450,450);
 
