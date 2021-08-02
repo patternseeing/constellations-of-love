@@ -489,7 +489,7 @@ function soundControl(){
       ambient.play();
 
 
-  }else {
+  }else if(snd == false) {
        heartBeat.pause();
     ambient.pause();
 
