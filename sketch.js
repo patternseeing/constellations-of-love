@@ -246,8 +246,8 @@ selBool= false;
 
   var hb = 3.5;
 
-   a = frameCount % 50;
-  wt = frameCount % 10;
+   a = frameCount % 100;
+  wt = frameCount % 20;
 
   var hbAngle = radians(frameCount * hb);
 
