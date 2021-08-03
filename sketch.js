@@ -165,7 +165,7 @@ function draw() {
 
 
 
-  if (counter >= 150) {
+  if (counter >= 100) {
     counter = 0;
     ind = ind + 1;
       selection.selected(ind);
@@ -246,8 +246,8 @@ selBool= false;
 
   var hb = 3.5;
 
-   a = frameCount % 100;
-  wt = frameCount % 20;
+   a = frameCount % 50;
+  wt = frameCount % 10;
 
   var hbAngle = radians(frameCount * hb);
 
