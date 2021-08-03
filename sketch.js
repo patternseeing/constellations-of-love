@@ -165,7 +165,7 @@ function draw() {
 
 
 
-  if (counter >= 100) {
+  if (counter >= 150) {
     counter = 0;
     ind = ind + 1;
       selection.selected(ind);
