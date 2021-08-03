@@ -2,9 +2,7 @@
 ////////// patternseeing | 2021  /////////////
 
 
-var filePath ="assets/data.csv";
-    
-  //"https://docs.google.com/spreadsheets/d/e/2PACX-1vSer5QV51YWQnsSkhYfDsqB41thTaBIf9pBlqutq7pueS8acrS7dguFwsh-H0Up6P00aBj9pJ9ZamSn/pub?output=csv";
+var filePath ="https://docs.google.com/spreadsheets/d/e/2PACX-1vSer5QV51YWQnsSkhYfDsqB41thTaBIf9pBlqutq7pueS8acrS7dguFwsh-H0Up6P00aBj9pJ9ZamSn/pub?output=csv";
 
 var word = [];
 var language = [];
@@ -57,8 +55,10 @@ function preload() {
     ambient = loadSound("assets/ambient");
 
 }
+
+
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+  createCanvas(displayWidth,displayHeight);
 
 	pixelDensity(1);
 
@@ -146,7 +146,7 @@ startButton.mousePressed(function(){introBool = false;soundControl()});
 
 
 
-  for (var i = 0; i < 1000; i ++)
+  for (var i = 0; i < 1100; i ++)
 	{
     stars [i] = new Star (8);
   }
