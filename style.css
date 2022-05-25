@@ -39,12 +39,12 @@ width:120px;
   font-size: 14px;
   color: white;
   -webkit-transition-duration: .6s;
-  background-color: red;
+  background-color: rgb(0, 0, 0);
 
   /* Safari */
 }
 .dropsel:focus {
-    background-color:red;
+    background-color:rgb(0, 0, 0);
 }
 
 .button {

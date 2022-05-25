@@ -209,6 +209,7 @@ fill(co2);
 
         fbButton.style('display','none');
 
+        selection.style('display','none');
 
         startButton.style('background-color',co2);
 
@@ -221,6 +222,8 @@ menuButton.style('display','block');
 saveButton.style('display','block');
 muteButton.style('display','block');
 tweetButton.style('display','block');
+
+selection.style('display','block');
 fbButton.style('display','block');
 }
 
@@ -235,7 +238,8 @@ color3 = lerpColor(color1,color2,sin(radians(counter)));
 
 searchWord = word[ind];
 selection.changed(newWord);
-selection.style('color',color(255-r,255-g,255-b,255*(sin(ang1))));
+//selection.style('color',color(255-r+55,255-g+55,255-b+55,55+200*(sin(ang1))));
+selection.style('color',color(255-r+55,255-g+55,255-b+55,155));
 
  if(selBool){
    counter = 0;
